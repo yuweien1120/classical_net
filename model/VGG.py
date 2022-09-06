@@ -19,6 +19,10 @@ def VGG_block(num_convs, in_channels, out_channels):
 
 class VGG(nn.Module):
     def __init__(self, conv_arch):
+        """
+        构建VGG模型
+        :param conv_arch: VGG块参数组成的元组
+        """
         super(VGG, self).__init__()
         conv_blks = []
         in_channels = 3
